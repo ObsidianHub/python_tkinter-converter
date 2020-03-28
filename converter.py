@@ -66,4 +66,8 @@ e_uah = ttk.Entry(calc_frame, justify=CENTER, font="Arial 10")
 e_uah.grid(row=0, column=1, columnspan=2, pady=10, padx=10, sticky=EW)
 e_uah.insert(0, START_AMOUNT)
 
+# Button
+btn_calc = ttk.Button(calc_frame, text="Обмен", command=exchange)
+btn_calc.grid(row=1, column=1, columnspan=2, sticky=EW, padx=10)
+
 root.mainloop()
