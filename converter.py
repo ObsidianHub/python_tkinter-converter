@@ -24,5 +24,7 @@ h_currency = Label(header_frame, text="Валюта", bg="#ccc", font="Arial 12 
 h_currency.grid(row=0, column=0, sticky=EW)
 h_buy = Label(header_frame, text="Покупка", bg="#ccc", font="Arial 12 bold")
 h_buy.grid(row=0, column=1, sticky=EW)
+h_sale = Label(header_frame, text="Продажа", bg="#ccc", font="Arial 12 bold")
+h_sale.grid(row=0, column=2, sticky=EW)
 
 root.mainloop()
