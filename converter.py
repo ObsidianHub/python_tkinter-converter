@@ -18,6 +18,9 @@ def exchange():
 # header frame
 header_frame = Frame(root)
 header_frame.pack(fill=X)
+header_frame.grid_columnconfigure(0, weight=1)
+header_frame.grid_columnconfigure(1, weight=1)
+header_frame.grid_columnconfigure(2, weight=1)
 
 # Header
 h_currency = Label(header_frame, text="Валюта", bg="#ccc", font="Arial 12 bold")
