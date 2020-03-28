@@ -59,4 +59,11 @@ calc_frame = Frame(root, bg="#fff")
 calc_frame.pack(expand=1, fill=BOTH)
 calc_frame.grid_columnconfigure(1, weight=1)
 
+# UAH
+l_uah = Label(calc_frame, text="Гривна:", bg="#fff", font="Arial 10 bold")
+l_uah.grid(row=0, column=0, padx=10)
+e_uah = ttk.Entry(calc_frame, justify=CENTER, font="Arial 10")
+e_uah.grid(row=0, column=1, columnspan=2, pady=10, padx=10, sticky=EW)
+e_uah.insert(0, START_AMOUNT)
+
 root.mainloop()
