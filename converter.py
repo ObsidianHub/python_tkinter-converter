@@ -46,4 +46,12 @@ eur_buy.grid(row=2, column=1, sticky=EW)
 eur_sale = Label(header_frame, text="27.60", bg="#ccc", font="Arial 10")
 eur_sale.grid(row=2, column=2, sticky=EW)
 
+# RUB course
+rub_currency = Label(header_frame, text="RUB", font="Arial 10")
+rub_currency.grid(row=3, column=0, sticky=EW)
+rub_buy = Label(header_frame, text="0.35", font="Arial 10")
+rub_buy.grid(row=3, column=1, sticky=EW)
+rub_sale = Label(header_frame, text="0.39", font="Arial 10")
+rub_sale.grid(row=3, column=2, sticky=EW)
+
 root.mainloop()
