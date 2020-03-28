@@ -54,4 +54,9 @@ rub_buy.grid(row=3, column=1, sticky=EW)
 rub_sale = Label(header_frame, text="0.39", font="Arial 10")
 rub_sale.grid(row=3, column=2, sticky=EW)
 
+# Calc Frame
+calc_frame = Frame(root, bg="#fff")
+calc_frame.pack(expand=1, fill=BOTH)
+calc_frame.grid_columnconfigure(1, weight=1)
+
 root.mainloop()
