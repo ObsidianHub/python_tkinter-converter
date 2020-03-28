@@ -38,4 +38,12 @@ usd_buy.grid(row=1, column=1, sticky=EW)
 usd_sale = Label(header_frame, text="25.60", font="Arial 10")
 usd_sale.grid(row=1, column=2, sticky=EW)
 
+# EUR course
+eur_currency = Label(header_frame, text="EUR", bg="#ccc", font="Arial 10")
+eur_currency.grid(row=2, column=0, sticky=EW)
+eur_buy = Label(header_frame, text="27.50", bg="#ccc", font="Arial 10")
+eur_buy.grid(row=2, column=1, sticky=EW)
+eur_sale = Label(header_frame, text="27.60", bg="#ccc", font="Arial 10")
+eur_sale.grid(row=2, column=2, sticky=EW)
+
 root.mainloop()
