@@ -11,4 +11,16 @@ root.resizable(False, False)
 
 START_AMOUNT = 1000
 
+# func
+def exchange():
+  pass
+
+# header frame
+header_frame = Frame(root)
+header_frame.pack(fill=X)
+
+# Header
+h_currency = Label(header_frame, text="Валюта", bg="#ccc", font="Arial 12 bold")
+h_currency.grid(row=0, column=0, sticky=EW)
+
 root.mainloop()
