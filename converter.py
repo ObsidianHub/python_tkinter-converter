@@ -70,4 +70,9 @@ e_uah.insert(0, START_AMOUNT)
 btn_calc = ttk.Button(calc_frame, text="Обмен", command=exchange)
 btn_calc.grid(row=1, column=1, columnspan=2, sticky=EW, padx=10)
 
+# Result Frame
+res_frame = Frame(root)
+res_frame.pack(expand=1, fill=BOTH, pady=5)
+res_frame.grid_columnconfigure(1, weight=1)
+
 root.mainloop()
