@@ -82,4 +82,11 @@ e_usd = ttk.Entry(res_frame, justify=CENTER, font="Arial 10")
 e_usd.grid(row=2, column=1, columnspan=2, padx=10, sticky=EW)
 e_usd.insert(0, '25000')
 
+# EUR
+l_eur = Label(res_frame, text="EUR:", font="Arial 10 bold")
+l_eur.grid(row=3, column=0)
+e_eur = ttk.Entry(res_frame, justify=CENTER, font="Arial 10")
+e_eur.grid(row=3, column=1, columnspan=2, padx=10, sticky=EW)
+e_eur.insert(0, '25000')
+
 root.mainloop()
