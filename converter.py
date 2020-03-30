@@ -13,7 +13,15 @@ START_AMOUNT = 1000
 
 # func
 def exchange():
-  pass
+  e_usd.delete(0, END)
+  e_eur.delete(0, END)
+  e_rub.delete(0, END)
+  try:
+    e_usd.insert(0, round(float(e_uah.get()) / float(JSON_object[0]['sale']), 2))
+    e_eur.insert(0, round(float(e_uah.get()) / float(JSON_object[1]['sale']), 2))
+    e_rub.insert(0, round(float(e_uah.get()) / float(JSON_object[2]['sale']), 2))
+  except:
+    messagebox.showwarning('Warning', 'Проверьте введенную сумму')
 
 try:
   html = urllib.request.urlopen('https://api.privatbank.ua/p24api/pubinfo?json&exchange&coursid=5')
