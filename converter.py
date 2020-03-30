@@ -75,4 +75,11 @@ res_frame = Frame(root)
 res_frame.pack(expand=1, fill=BOTH, pady=5)
 res_frame.grid_columnconfigure(1, weight=1)
 
+# USD
+l_usd = Label(res_frame, text="USD:", font="Arial 10 bold")
+l_usd.grid(row=2, column=0)
+e_usd = ttk.Entry(res_frame, justify=CENTER, font="Arial 10")
+e_usd.grid(row=2, column=1, columnspan=2, padx=10, sticky=EW)
+e_usd.insert(0, '25000')
+
 root.mainloop()
