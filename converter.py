@@ -87,20 +87,20 @@ l_usd = Label(res_frame, text="USD:", font="Arial 10 bold")
 l_usd.grid(row=2, column=0)
 e_usd = ttk.Entry(res_frame, justify=CENTER, font="Arial 10")
 e_usd.grid(row=2, column=1, columnspan=2, padx=10, sticky=EW)
-e_usd.insert(0, '25000')
+e_usd.insert(0, round(START_AMOUNT / float(JSON_object[0]['sale']), 2))
 
 # EUR
 l_eur = Label(res_frame, text="EUR:", font="Arial 10 bold")
 l_eur.grid(row=3, column=0)
 e_eur = ttk.Entry(res_frame, justify=CENTER, font="Arial 10")
 e_eur.grid(row=3, column=1, columnspan=2, padx=10, sticky=EW)
-e_eur.insert(0, '25000')
+e_eur.insert(0, round(START_AMOUNT / float(JSON_object[1]['sale']), 2))
 
 # RUB
 l_rub = Label(res_frame, text="RUB:", font="Arial 10 bold")
 l_rub.grid(row=4, column=0)
 e_rub = ttk.Entry(res_frame, justify=CENTER, font="Arial 10")
 e_rub.grid(row=4, column=1, columnspan=2, padx=10, sticky=EW)
-e_rub.insert(0, '10000')
+e_rub.insert(0, round(START_AMOUNT / float(JSON_object[2]['sale']), 2))
 
 root.mainloop()
