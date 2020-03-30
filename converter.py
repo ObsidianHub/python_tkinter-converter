@@ -15,8 +15,12 @@ START_AMOUNT = 1000
 def exchange():
   pass
 
-html = urllib.request.urlopen('https://api.privatbank.ua/p24api/pubinfo?json&exchange&coursid=5')
-print(html)
+try:
+  html = urllib.request.urlopen('https://api.privatbank.ua/p24api/pubinfo?json&exchange&coursid=5')
+  data = html.read()
+  JSON_object = json.loads(data)
+except:
+  messagebox.showerror('Error', 'Ошибка получения курсов валют')
 
 # header frame
 header_frame = Frame(root)
