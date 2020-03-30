@@ -89,4 +89,11 @@ e_eur = ttk.Entry(res_frame, justify=CENTER, font="Arial 10")
 e_eur.grid(row=3, column=1, columnspan=2, padx=10, sticky=EW)
 e_eur.insert(0, '25000')
 
+# RUB
+l_rub = Label(res_frame, text="RUB:", font="Arial 10 bold")
+l_rub.grid(row=4, column=0)
+e_rub = ttk.Entry(res_frame, justify=CENTER, font="Arial 10")
+e_rub.grid(row=4, column=1, columnspan=2, padx=10, sticky=EW)
+e_rub.insert(0, '10000')
+
 root.mainloop()
