@@ -12,23 +12,30 @@ root.resizable(False, False)
 START_AMOUNT = 1000
 
 # func
+
+
 def exchange():
-  e_usd.delete(0, END)
-  e_eur.delete(0, END)
-  e_rub.delete(0, END)
-  try:
-    e_usd.insert(0, round(float(e_uah.get()) / float(JSON_object[0]['sale']), 2))
-    e_eur.insert(0, round(float(e_uah.get()) / float(JSON_object[1]['sale']), 2))
-    e_rub.insert(0, round(float(e_uah.get()) / float(JSON_object[2]['sale']), 2))
-  except:
-    messagebox.showwarning('Warning', 'Проверьте введенную сумму')
+    e_usd.delete(0, END)
+    e_eur.delete(0, END)
+    e_rub.delete(0, END)
+    try:
+        e_usd.insert(0, round(float(e_uah.get()) /
+                              float(JSON_object[0]['sale']), 2))
+        e_eur.insert(0, round(float(e_uah.get()) /
+                              float(JSON_object[1]['sale']), 2))
+        e_rub.insert(0, round(float(e_uah.get()) /
+                              float(JSON_object[2]['sale']), 2))
+    except:
+        messagebox.showwarning('Warning', 'Проверьте введенную сумму')
+
 
 try:
-  html = urllib.request.urlopen('https://api.privatbank.ua/p24api/pubinfo?json&exchange&coursid=5')
-  data = html.read()
-  JSON_object = json.loads(data)
+    html = urllib.request.urlopen(
+        'https://api.privatbank.ua/p24api/pubinfo?json&exchange&coursid=5')
+    data = html.read()
+    JSON_object = json.loads(data)
 except:
-  messagebox.showerror('Error', 'Ошибка получения курсов валют')
+    messagebox.showerror('Error', 'Ошибка получения курсов валют')
 
 # header frame
 header_frame = Frame(root)
@@ -38,7 +45,8 @@ header_frame.grid_columnconfigure(1, weight=1)
 header_frame.grid_columnconfigure(2, weight=1)
 
 # Header
-h_currency = Label(header_frame, text="Валюта", bg="#ccc", font="Arial 12 bold")
+h_currency = Label(header_frame, text="Валюта",
+                   bg="#ccc", font="Arial 12 bold")
 h_currency.grid(row=0, column=0, sticky=EW)
 h_buy = Label(header_frame, text="Покупка", bg="#ccc", font="Arial 12 bold")
 h_buy.grid(row=0, column=1, sticky=EW)
@@ -56,9 +64,11 @@ usd_sale.grid(row=1, column=2, sticky=EW)
 # EUR course
 eur_currency = Label(header_frame, text="EUR", bg="#ccc", font="Arial 10")
 eur_currency.grid(row=2, column=0, sticky=EW)
-eur_buy = Label(header_frame, text=JSON_object[1]['buy'], bg="#ccc", font="Arial 10")
+eur_buy = Label(
+    header_frame, text=JSON_object[1]['buy'], bg="#ccc", font="Arial 10")
 eur_buy.grid(row=2, column=1, sticky=EW)
-eur_sale = Label(header_frame, text=JSON_object[1]['sale'], bg="#ccc", font="Arial 10")
+eur_sale = Label(
+    header_frame, text=JSON_object[1]['sale'], bg="#ccc", font="Arial 10")
 eur_sale.grid(row=2, column=2, sticky=EW)
 
 # RUB course
